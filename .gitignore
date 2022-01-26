@@ -1,6 +1,5 @@
 /vendor/
 /ueditor/
-/tests/
 .htaccess
 nginx.htaccess
 .idea/
