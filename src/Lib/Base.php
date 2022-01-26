@@ -1,19 +1,11 @@
 <?php
-namespace Develop\Editor\Lib;
 
-/**
- * 基类处理方法
- *
- * @author   widuu <admin@widuu.com>
- * @document https://github.com/widuu/qiniu_ueditor_1.4.3
- */
+namespace Develop\Editor\Lib;
 
 class Base
 {
-
     // 配置文件信息
     protected $config;
-
     // Ueditor配置信息
     protected $ue_config;
 
@@ -23,24 +15,12 @@ class Base
         $this->ue_config = $this->config();
     }
 
-    /**
-     * Ueditor 获取配置信息的返回方法
-     *
-     * @return array
-     * @author widuu <admin@widuu.com>
-     */
 
     public function config(): array
     {
         return (new EditorConfig())->config();
     }
 
-    /**
-     * 判断方法是否存在并调用方法
-     *
-     * @return array
-     * @author widuu <admin@widuu.com>
-     */
 
     public function __call($method, $params)
     {
@@ -62,12 +42,6 @@ class Base
         );
     }
 
-    /**
-     * 获取json配置里边的上传参数
-     *
-     * @return array
-     * @author widuu <admin@widuu.com>
-     */
 
     public function setUploadConfig($method)
     {
@@ -92,12 +66,6 @@ class Base
         return $config;
     }
 
-    /**
-     * 判断json中是否定义了方法
-     *
-     * @return boolean
-     * @author widuu <admin@widuu.com>
-     */
 
     public function hasUploadMethod($action_name)
     {
@@ -109,12 +77,6 @@ class Base
         return false;
     }
 
-    /**
-     * 获取Ueditor配置文件信息
-     *
-     * @return array
-     * @author widuu <admin@widuu.com>
-     */
 
     public function getUeConfig()
     {

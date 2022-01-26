@@ -6,9 +6,6 @@ use Develop\Editor\Lib\Driver\QiniuDriver;
 
 /**
  * 七牛上传方法
- *
- * @author   widuu <admin@widuu.com>
- * @document https://github.com/widuu/qiniu_ueditor_1.4.3
  */
 class Qiniu extends Base
 {
@@ -17,8 +14,6 @@ class Qiniu extends Base
 
     /**
      * 继承Base并且实列化QiniuDirver
-     *
-     * @author   widuu <admin@widuu.com>
      */
 
     public function __construct($config)
@@ -42,9 +37,6 @@ class Qiniu extends Base
 
     /**
      * 直接七牛URL直传的时候获取token的方法
-     *
-     * @return  array
-     * @author   widuu <admin@widuu.com>
      */
 
     public function getToken()
@@ -54,10 +46,8 @@ class Qiniu extends Base
 
     /**
      * 上传文件的方法
-     *
      * @param string $method 根据method来配置传输参数
      * @return  array
-     * @author   widuu <admin@widuu.com>
      */
 
     public function upload($method)
@@ -69,9 +59,7 @@ class Qiniu extends Base
 
     /**
      * 删除文件的方法，七牛远程删除单个文件的方法
-     *
      * @return  array
-     * @author   widuu <admin@widuu.com>
      */
 
     public function remove()
@@ -88,10 +76,8 @@ class Qiniu extends Base
 
     /**
      * Ueditor的七牛在线列表
-     *
      * @param string $method 列出文件的类型
      * @return  array
-     * @author  widuu <admin@widuu.com>
      */
 
     public function listFile($method)
@@ -162,8 +148,6 @@ class Qiniu extends Base
 
     /**
      * 分片上传合成文件的方法
-     *
-     * @author widuu <admin@widuu.com>
      */
 
     public function makeFile()
@@ -174,8 +158,6 @@ class Qiniu extends Base
 
     /**
      * 远程图片抓取 [采用原有ueditor方法]
-     *
-     * @author widuu <admin@widuu.com>
      */
 
     public function catchimage()

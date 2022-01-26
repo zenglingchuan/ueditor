@@ -6,19 +6,9 @@ use Develop\Editor\Lib\Driver\LocalDriver;
 
 /**
  * 原始的本地上传处理方法
- *
- * @author   widuu <admin@widuu.com>
- * @document https://github.com/widuu/qiniu_ueditor_1.4.3
  */
 class Local extends Base
 {
-
-    /**
-     * 上传方法[基于Ueditor自带的Uploader]
-     *
-     * @author widuu <admin@widuu.com>
-     */
-
     public function upload($method)
     {
         $upload_config = $this->setUploadConfig($method);
@@ -32,8 +22,6 @@ class Local extends Base
 
     /**
      * 删除文件方法
-     *
-     * @author widuu <admin@widuu.com>
      */
 
     public function remove()
@@ -64,8 +52,6 @@ class Local extends Base
 
     /**
      * 远程图片抓取 [采用原有ueditor方法]
-     *
-     * @author widuu <admin@widuu.com>
      */
 
     public function catchimage()
@@ -110,8 +96,6 @@ class Local extends Base
 
     /**
      * 列出文件列表 [采用原有ueditor方法]
-     *
-     * @author widuu <admin@widuu.com>
      */
 
     public function listFile($method)

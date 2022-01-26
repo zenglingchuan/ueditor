@@ -1,12 +1,7 @@
 <?php
 
 namespace Develop\Editor\Lib\Driver;
-/**
- * 七牛处理驱动
- *
- * @author   widuu <admin@widuu.com>
- * @document https://github.com/widuu/qiniu_ueditor_1.4.3
- */
+
 class QiniuDriver
 {
 
@@ -26,8 +21,6 @@ class QiniuDriver
 
     /**
      * 用于直传的时候获取token的方法
-     *
-     * @author   widuu <admin@widuu.com>
      */
 
 
@@ -43,8 +36,6 @@ class QiniuDriver
 
     /**
      * 七牛删除文件方法
-     *
-     * @author   widuu <admin@widuu.com>
      */
 
     public function removeFile($file)
@@ -65,7 +56,6 @@ class QiniuDriver
      * @param string $image_url 抓取的url
      * @param array $ue_config ueditor 配置信息
      * @return   array
-     * @author   widuu <admin@widuu.com>
      */
 
     public function fetchFile($image_url, $ue_config)
@@ -110,7 +100,6 @@ class QiniuDriver
      * 七牛合成文件的方法
      * @param array  合成文件信息
      * @return   array
-     * @author   widuu <admin@widuu.com>
      */
 
     public function Synthesis($params = array(), $ue_config)
@@ -149,7 +138,6 @@ class QiniuDriver
      * @param array $config ueditor    php配置信息
      * @param array $ue_config ueditor json配置信息
      * @return    array
-     * @author  widuu <admin@widuu.com>
      */
 
     public function getFileInfo($config, $ue_config)
@@ -180,7 +168,6 @@ class QiniuDriver
      * @param prefix 前缀
      * @param marker 标记
      * @param limit  限制出现的个数
-     * @author  widuu <admin@widuu.com>
      */
 
     public function getList($prefix, $marker, $limit)
@@ -199,7 +186,6 @@ class QiniuDriver
      * @param array $config ueditor    php配置信息
      * @param array $ue_config ueditor json配置信息
      * @return    array
-     * @author  widuu <admin@widuu.com>
      */
 
     private function setUploadInfo($config, $ue_config)
@@ -228,7 +214,6 @@ class QiniuDriver
      * @param array $ue_config ueditor json配置信息
      * @param array $flag false 上传文件|true 远程抓取
      * @return    string
-     * @author  widuu <admin@widuu.com>
      */
 
     private function getFileName($field_name, $ue_config, $flag = false)
@@ -272,7 +257,6 @@ class QiniuDriver
      *
      * @param array $upload_info 上传文件信息
      * @return    array
-     * @author  widuu <admin@widuu.com>
      */
 
     private function uploadFile($upload_info)
@@ -321,7 +305,6 @@ class QiniuDriver
      * @param string $prefix 前缀
      * @param string $marker 标记
      * @param int $limit 限制出现的个数
-     * @author widuu <admin@widuu.com>
      */
 
     private function getListRequestInfo($prefix = '', $marker = '', $limit = 0)
@@ -347,9 +330,7 @@ class QiniuDriver
 
     /**
      * 七牛Sign方法
-     *
      * @param string $sign_data 加密字符串
-     * @author   widuu <admin@widuu.com>
      */
 
     private function getSign($sign_data)
@@ -361,10 +342,7 @@ class QiniuDriver
 
     /**
      * 直传水印url拼接方式
-     *
-     * @author   widuu <admin@widuu.com>
      */
-
     private function getDirectReturnBody()
     {
         //使用水印和非使用水印拼接方法
@@ -393,7 +371,6 @@ class QiniuDriver
      * 七牛base64方法
      *
      * @param string $infomation base64的字符串
-     * @author   widuu <admin@widuu.com>
      */
 
     private function SafeBase64Encode($infomation)
@@ -409,7 +386,6 @@ class QiniuDriver
      *
      * @param string $key 文件名称
      * @return string
-     * @author widuu    <admin@widuu.com>
      */
 
     private function getUploadToken($key)
@@ -438,17 +414,14 @@ class QiniuDriver
     private function request($path, $method, $headers = null, $body = null)
     {
         $ch = curl_init($path);
-
         $_headers = array('Expect:');
         if (!is_null($headers) && is_array($headers)) {
             foreach ($headers as $k => $v) {
                 array_push($_headers, "{$k}: {$v}");
             }
         }
-
         $length = 0;
         $date = gmdate('D, d M Y H:i:s \G\M\T');
-
         if (!is_null($body)) {
             if (is_resource($body)) {
                 fseek($body, 0, SEEK_END);
@@ -522,7 +495,6 @@ class QiniuDriver
     /**
      * 特殊字符串处理
      * @param string $str
-     * @author   widuu <admin@widuu.com>
      */
 
     private function escapeQuotes($str)

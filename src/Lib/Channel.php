@@ -1,12 +1,7 @@
 <?php
 
 namespace Develop\Editor\Lib;
-/**
- * 处理方法
- *
- * @author   widuu <admin@widuu.com>
- * @document https://github.com/widuu/qiniu_ueditor_1.4.3
- */
+
 class Channel
 {
 
@@ -27,9 +22,9 @@ class Channel
                 'error' => $class_name . ' class not exists'
             );
         } else {
-            if($class_name == 'Qiniu'){
+            if ($class_name == 'Qiniu') {
                 $this->handle = new Qiniu($config);
-            }else{
+            } else {
                 $this->handle = new Local($config);
             }
 
