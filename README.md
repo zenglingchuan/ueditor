@@ -1,3 +1,6 @@
+#   包制作参考
++ `https://blog.csdn.net/qq_33845254/article/details/106349865`
++ `https://packagist.org/packages/submit`
 # UEditor七牛云和本地存储
 
 ## 关于地址报错
