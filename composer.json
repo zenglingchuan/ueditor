@@ -1,0 +1,15 @@
+{
+    "name": "develop/editor",
+    "autoload": {
+        "psr-4": {
+            "Develop\\Editor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chuan",
+            "email": "zenglingchuan@126.com"
+        }
+    ],
+    "require": {}
+}
