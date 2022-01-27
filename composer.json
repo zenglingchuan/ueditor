@@ -5,6 +5,7 @@
             "Develop\\Editor\\": "src/"
         }
     },
+    "license": "MIT",
     "authors": [
         {
             "name": "chuan",
